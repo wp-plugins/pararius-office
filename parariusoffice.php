@@ -15,7 +15,7 @@ require_once 'lib/debug.options.php';
 
 defined('PARARIUSOFFICE_INDEX_FILE') || define('PARARIUSOFFICE_INDEX_FILE', __FILE__);
 defined('PARARIUSOFFICE_PLUGIN_PATH') || define('PARARIUSOFFICE_PLUGIN_PATH', dirname(__FILE__));
-defined('PARARIUSOFFICE_PLUGIN_URL') || define('PARARIUSOFFICE_PLUGIN_URL', WP_PLUGIN_URL . '/parariusoffice');
+defined('PARARIUSOFFICE_PLUGIN_URL') || define('PARARIUSOFFICE_PLUGIN_URL', rtrim(plugin_dir_url(__FILE__), '/'));
 
 // load external libs
 require_once PARARIUSOFFICE_PLUGIN_PATH . '/vendor/load.php';
