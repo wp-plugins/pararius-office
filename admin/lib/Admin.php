@@ -288,7 +288,7 @@ class ParariusOffice_Base_Admin extends ParariusOffice_Base
 			if (!get_option($value))
 			{
 				$tmp = array();
-				foreach ($lists['rent'] as $detail => $checked)
+				foreach ($list as $detail => $checked)
 				{
 					$tmp[$detail] = $checked[$key];
 				}

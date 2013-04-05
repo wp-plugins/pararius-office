@@ -2077,7 +2077,7 @@ class Nomis_Api
 			if (isset($newData['result']))
 			{
 				$data = array(
-					'result' => array_merge($currentData['result'], $newData['result']['properties'])
+					'result' => $newData['result']['properties']
 				);
 
 				$currentIds = explode(';', $newData['result']['current-properties']);
