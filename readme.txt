@@ -3,7 +3,7 @@ Contributors: Anno MMX
 Tags: Pararius, Pararius Office
 Requires at least: 3.5
 Tested up to: 3.5
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv2
 
 Use this plugin to display properties out of the backoffice Pararius Office
@@ -41,3 +41,7 @@ Use path provided by WordPress
 Bugfixes
 - Startup error solved
 - cache was not always flushed
+
+= 1.0.5 =
+
+Custom template for maps
