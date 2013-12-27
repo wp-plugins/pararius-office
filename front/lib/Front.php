@@ -263,13 +263,17 @@ class ParariusOffice_Base_Front extends ParariusOffice_Base
 	
 	public function propertiesMapShortcode($attr)
 	{
+		$attr = shortcode_atts(array(
+			'template' => null,
+		), $attr);
+
 		$this->getApi()->setPropertiesPerPage(999999);
 		
 		$args = array(
 			'action' => 'search'
 		);
 		
-		return $this->runApi($args, null, 'templates/properties-map.phtml');
+		return $this->runApi($args, $attr['template'], 'templates/properties-map.phtml');
 	}
 	
 	public function contactformShortcode($attr)
