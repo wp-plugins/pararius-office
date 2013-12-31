@@ -13,14 +13,14 @@ function parariusoffice_property_title($property)
 	{
 		if (!empty($property['street']))
 		{
-			$parts[] = $property['street'];
+			$parts[] = trim($property['street'] . ' ' . $property['number'] . ' ' . $property['addition']);
 		}
 	}
 	else
 	{
 		if (!empty($property['street']))
 		{
-			$parts[] = trim($property['street'] . ' ' . $property['number'] . ' ' . $property['addition']);
+			$parts[] = $property['street'];
 		}
 	}
 
