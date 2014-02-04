@@ -2,8 +2,8 @@
 Contributors: Anno MMX
 Tags: Pararius, Pararius Office
 Requires at least: 3.5
-Tested up to: 3.5
-Stable tag: 1.0.6
+Tested up to: 3.8
+Stable tag: 1.0.7
 License: GPLv2
 
 Use this plugin to display properties out of the backoffice Pararius Office
@@ -49,3 +49,7 @@ Custom template for maps
 = 1.0.6 =
 
 Forsale properties should have their address shown, not rentals
+
+= 1.0.7 =
+
+Use WordPress language for the API-calls
