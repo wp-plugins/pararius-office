@@ -30,6 +30,7 @@ abstract class ParariusOffice_Base
 			{
 				require_once PARARIUSOFFICE_PLUGIN_PATH . '/lib/Api.php';
 				$this->_api = new Nomis_Api(get_option('nomis_api_key'));
+				$this->_api->setLanguage(substr(get_bloginfo('language'), 0, 2));
 			}
 			catch (Nomis_Api_Exception $e)
 			{
