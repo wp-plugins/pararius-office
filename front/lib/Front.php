@@ -138,18 +138,15 @@ class ParariusOffice_Base_Front extends ParariusOffice_Base
 		else
 		{
 			$settingsOrder = get_option('nomis_properties_order');
-				
-			if (!empty($settingsOrder))
+
+			// `price=asc` === default, don't set it
+			if (!empty($settingsOrder) && $settingsOrder !== 'price=asc')
 			{
 				$args['order'] = $settingsOrder;
 			}
-			else
-			{
-				$args['order'] = 'price=asc';
-			}
 		}
 			
-		return $this->runApi($args + $_GET, $attr['template'], 'templates/properties.phtml');
+		return $this->runApi(array_filter($args) + array_filter($_GET), $attr['template'], 'templates/properties.phtml');
 	}
 
 	public function propertyShortcode($attr, $content, $shortcodeName, $defaultTemplate = 'templates/property.phtml')
