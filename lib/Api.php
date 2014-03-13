@@ -1094,7 +1094,7 @@ class Nomis_Api
 						break;
 					case 'house_type':
 						if (!empty($value)) $search['house_type'] = $value;
-						if (!empty($value) && stripos($house['house_type'], $value) !== false
+						if (!empty($value) && stripos($house['house_type'], $value) === false
 						 || !empty($value) && empty($house['house_type']))
 						{
 							unset($houses[$id]);
