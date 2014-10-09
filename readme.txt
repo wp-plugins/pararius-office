@@ -3,7 +3,7 @@ Contributors: Anno MMX
 Tags: Pararius, Pararius Office
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.0.10
+Stable tag: 1.0.11
 License: GPLv2
 
 Use this plugin to display properties out of the backoffice Pararius Office
@@ -61,3 +61,7 @@ Change the way the default order is handled
 = 1.0.9 =
 
 Searching on house type performed an negative search, instead of positive
+
+= 1.0.11 =
+
+Fix a bug that prevented saving the forms
