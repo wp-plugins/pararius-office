@@ -596,7 +596,7 @@ class ParariusOffice_Base_Admin extends ParariusOffice_Base
 		}
 	}
 
-	private function _saveForms($rawData)
+	private function _saveForms($forms, $rawData)
 	{
 		$requiresForm = array(
 			'nomis_add_request_form',
