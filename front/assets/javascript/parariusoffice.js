@@ -191,7 +191,7 @@ jQuery(function($, window) {
 			height: $(this).height()
 		});
 		var ul = photos.find('ul').css('position', 'absolute');
-		var max = photos.width() - ul.width();
+		var max = ul.find('li:last').position().left + ul.find('li:last').width() - photos.width();
 		var offset = 0;
 		var gap = ul.find('li:eq(1)').position().left;
 
@@ -199,7 +199,7 @@ jQuery(function($, window) {
 			if (m) {
 				offset = offset - m * gap;
 				offset = Math.min(0, offset);
-				offset = Math.max(max, offset);
+				offset = Math.max(-max, offset);
 
 				ul.animate({
 					left: offset
@@ -207,7 +207,7 @@ jQuery(function($, window) {
 			}
 
 			prev.toggle(offset < 0);
-			next.toggle(offset > max);
+			next.toggle(offset > -max);
 		};
 		
 		var prev = $('<div class="prev"/>').appendTo(photos).on('click', function(){handler(-2);});

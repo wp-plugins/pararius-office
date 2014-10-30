@@ -215,6 +215,7 @@
   display: inline-block;
   zoom: 1;
   *display: inline;
+  width: 100px;
 }
 .parariusoffice-property .photos .prev,
 .parariusoffice-property .photos .next {
