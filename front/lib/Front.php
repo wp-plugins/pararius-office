@@ -177,11 +177,13 @@ class ParariusOffice_Base_Front extends ParariusOffice_Base
 	
 	private function _propertyPrintShortcut()
 	{
-		add_action('parse_query', function()
+		$thiz = $this;
+
+		add_action('parse_query', function() use ($thiz)
 		{
 			if (isset($_GET['print-property']))
 			{
-				echo $this->propertyShortcode(array(), '', 'parariusoffice-property', 'templates/property-print.phtml');
+				echo $thiz->propertyShortcode(array(), '', 'parariusoffice-property', 'templates/property-print.phtml');
 				exit; // kill wordpress
 			}
 		});
