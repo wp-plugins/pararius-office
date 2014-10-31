@@ -146,7 +146,8 @@ class ParariusOffice_Base_Front extends ParariusOffice_Base
 			}
 		}
 			
-		return $this->runApi(array_filter($args) + array_filter($_GET), $attr['template'], 'templates/properties.phtml');
+		$combinedArgs = array_filter($args) + array_filter($_GET, function($item) { return $item !== ''; });
+		return $this->runApi($combinedArgs, $attr['template'], 'templates/properties.phtml');
 	}
 
 	public function propertyShortcode($attr, $content, $shortcodeName, $defaultTemplate = 'templates/property.phtml')

@@ -1011,8 +1011,17 @@ class Nomis_Api
 						break;
 					
 					case 'for-sale':
-						if (!empty($value)) $search['for-sale'] = $value;
-						if (ctype_digit((string) $value) && $house['forsale'] != (string) $value)
+						if ($value === '1' || $value === '0') $search['for-sale'] = $value;
+
+						// when not for sale, unset
+						if ($value === '1' && $house['forsale'] != '1')
+						{
+							unset($houses[$id]);
+							continue;
+						}
+
+						// when not for rent, unset
+						if ($value === '0' && $house['forrent'] != '1')
 						{
 							unset($houses[$id]);
 							continue;

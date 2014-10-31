@@ -230,7 +230,7 @@ function parariusoffice_search(array $criteria, $data, $searchType, $allCities, 
 			case 'radio':
 				foreach ($label as $optionKey => $optionLabel):
 				?>
-				<input value="<?php echo $optionKey; ?>" type="radio" name="<?php echo $fieldname; ?>" id="<?php echo $fieldname . '-' . $optionKey; ?>"<?php if (isset($data['search'][$fieldname]) && $data['search'][$fieldname] == $optionValue) echo ' selected="selected"'; ?> />
+				<input value="<?php echo $optionKey; ?>" type="radio" name="<?php echo $fieldname; ?>" id="<?php echo $fieldname . '-' . $optionKey; ?>"<?php if (isset($data['search'][$fieldname]) && $data['search'][$fieldname] == $optionKey) echo ' checked="checked"'; ?> />
 				<label for="<?php echo $fieldname . '-' . $optionKey; ?>" class="<?php echo $fieldname . ' ' . $type; ?>"><?php echo $optionLabel; ?></label>
 				<?php
 				endforeach;
