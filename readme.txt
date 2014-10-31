@@ -3,7 +3,7 @@ Contributors: Anno MMX
 Tags: Pararius, Pararius Office
 Requires at least: 3.5
 Tested up to: 4.0
-Stable tag: 1.0.12
+Stable tag: 1.0.13
 License: GPLv2
 
 Use this plugin to display properties out of the backoffice Pararius Office
@@ -69,3 +69,7 @@ Fix a bug that prevented saving the forms
 = 1.0.12 =
 
 PHP 5.3 compat fix for the print functionality
+
+= 1.0.13 =
+
+Make searching on for sale a bit more robust
