@@ -51,8 +51,7 @@ abstract class ParariusOffice_Base
 
 	private function _setupRoutes()
 	{
-		// we only want to do this on activation, wordpress caches it
-		register_activation_hook(PARARIUSOFFICE_INDEX_FILE, function()
+		add_action('init', function()
 		{
 			$rule = 'property/([^/]+)/([^/]+)/([^/]+)/?$';
 			
