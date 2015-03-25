@@ -4,7 +4,7 @@ require_once PARARIUSOFFICE_PLUGIN_PATH . '/lib/functions/load.php';
 
 abstract class ParariusOffice_Base
 {
-	const VERSION = '1.0.14';
+	const VERSION = '1.0.15';
 	
 	private $_api;
 

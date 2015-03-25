@@ -3,7 +3,7 @@ Contributors: Anno MMX
 Tags: Pararius, Pararius Office
 Requires at least: 3.5
 Tested up to: 4.1
-Stable tag: 1.0.14
+Stable tag: 1.0.15
 License: GPLv2
 
 Use this plugin to display properties out of the backoffice Pararius Office
@@ -78,3 +78,7 @@ Make searching on for sale a bit more robust
 
 Typo: Descrption -> Description
 Add property route on all requests
+
+= 1.0.15 =
+
+Change the way we handle AJAX-requests
