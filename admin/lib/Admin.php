@@ -30,11 +30,7 @@ class ParariusOffice_Base_Admin extends ParariusOffice_Base
 		if (!defined('DOING_AJAX')) return;
 
 		$thiz = $this;
-		$actionName = 1||is_user_logged_in()
-			? 'wp_ajax_parariusoffice_contact'
-			: 'wp_ajax_nopriv_parariusoffice_contact';
-
-		add_action($actionName, function() use ($thiz)
+		$contactAjaxHandler = function() use ($thiz)
 		{
 			$post = $_POST;
 			$response = array();
@@ -92,7 +88,10 @@ class ParariusOffice_Base_Admin extends ParariusOffice_Base
 			header('Content-type: application/json');
 			echo json_encode($response);
 			exit;
-		});
+		};
+
+		add_action('wp_ajax_parariusoffice_contact', $contactAjaxHandler);
+		add_action('wp_ajax_nopriv_parariusoffice_contact', $contactAjaxHandler);
 	}
 	
 	private function _addMailAFriendAjaxHandler()
